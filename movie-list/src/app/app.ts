@@ -26,7 +26,7 @@ export class App {
 
   checkAvailability(movie: Movie) {
     console.log(`Checking tickets for: ${movie.title}`);
-    const event = new CustomEvent('checkTicketAvailability', { detail: movie });
+    const event = new CustomEvent('checkMovieTicketAvailability', { detail: movie });
     window.dispatchEvent(event);
   }
 }
