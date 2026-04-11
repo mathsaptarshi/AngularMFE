@@ -16,6 +16,9 @@ export class App implements OnInit, OnDestroy{
   @ViewChild('movieList',{read: ViewContainerRef,static:true}) listContainer!: ViewContainerRef;
   private listContainerRef: ComponentRef<any>|null = null;
 
+  @ViewChild('ticketAvailability',{read: ViewContainerRef,static:true}) ticketAvailabilityContainer!: ViewContainerRef;
+  private ticketAvailabilityContainerRef: ComponentRef<any>|null = null;
+
   constructor(private _mfeService:MFEServices){
 
   }
@@ -26,6 +29,13 @@ export class App implements OnInit, OnDestroy{
       this.listContainer.clear();
       this.listContainerRef = this.listContainer.createComponent(listModule.App);
       this.listContainerRef.changeDetectorRef.detectChanges();
+
+
+
+      const ticketAvailabilityModule = await this._mfeService.loadRemoteApplication(4202,'ticket-availability');
+      this.ticketAvailabilityContainer.clear();
+      this.ticketAvailabilityContainerRef = this.ticketAvailabilityContainer.createComponent(ticketAvailabilityModule.App);
+      this.ticketAvailabilityContainerRef.changeDetectorRef.detectChanges();
     }
     catch(err){
 
