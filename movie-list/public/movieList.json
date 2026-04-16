@@ -1,0 +1,16 @@
+[
+  { "id": 1, "title": "Dune: Part Two", "genre": "Sci-Fi", "language": "English" },
+  { "id": 2, "title": "Kung Fu Panda 4", "genre": "Animation/Action", "language": "English" },
+  { "id": 3, "title": "Godzilla x Kong", "genre": "Action/Sci-Fi", "language": "English" },
+  { "id": 4, "title": "Oppenheimer", "genre": "Sci-Fi/Drama", "language": "English" },
+  { "id": 5, "title": "Deadpool & Wolverine", "genre": "Action/Comedy", "language": "English" },
+  { "id": 6, "title": "Inside Out 2", "genre": "Animation/Comedy", "language": "English" },
+  { "id": 7, "title": "The Fall Guy", "genre": "Action/Comedy", "language": "English" },
+  { "id": 8, "title": "Furiosa: A Mad Max Saga", "genre": "Action/Adventure", "language": "English" },
+  { "id": 9, "title": "Kingdom of the Planet of the Apes", "genre": "Action/Sci-Fi", "language": "English" },
+  { "id": 10, "title": "Civil War", "genre": "Action/Thriller", "language": "English" },
+  { "id": 11, "title": "Ghostbusters: Frozen Empire", "genre": "Comedy/Sci-Fi", "language": "English" },
+  { "id": 12, "title": "A Quiet Place: Day One", "genre": "Horror/Sci-Fi", "language": "English" },
+  { "id": 13, "title": "Kalki 2898 AD", "genre": "Sci-Fi/Action", "language": "Telugu" },
+  { "id": 14, "title": "Despicable Me 4", "genre": "Animation/Comedy", "language": "English" }
+]

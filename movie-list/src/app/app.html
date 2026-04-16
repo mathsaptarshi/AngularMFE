@@ -2,7 +2,7 @@
   <h2>Currently Showing</h2>
   
   <div class="movie-grid">
-    @for (movie of movies; track movie.id) {
+    @for (movie of movies(); track movie.id) {
       <div class="movie-card">
         <div class="movie-info">
           <h3>{{ movie.title }}</h3>
