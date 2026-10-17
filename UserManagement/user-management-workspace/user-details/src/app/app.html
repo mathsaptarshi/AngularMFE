@@ -1,0 +1,46 @@
+<div class="details-container">
+      <div class="breadcrumb">
+        <a routerLink="/user-list">&larr; Back to User List</a>
+        <span class="mfe-badge">Remote: user-details (Port 4203)</span>
+      </div>
+
+      <div class="profile-card" *ngIf="user(); else notFound">
+        <div class="profile-header">
+          <img [src]="user()?.avatar" [alt]="user()?.name" class="profile-avatar" />
+          <div>
+            <h2>{{ user()?.name }}</h2>
+            <div class="tag-row">
+              <span class="role-badge">{{ user()?.role }}</span>
+              <span class="status-indicator">{{ user()?.status }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="detail-item">
+            <span class="label">Email Address</span>
+            <span class="value">{{ user()?.email }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Department</span>
+            <span class="value">{{ user()?.department }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Location</span>
+            <span class="value">{{ user()?.location }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Joined Date</span>
+            <span class="value">{{ user()?.joinDate || '2023-01-15' }}</span>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #notFound>
+        <div class="not-found">
+          <h3>User not found</h3>
+          <p>No user profile located for ID: {{ userId }}</p>
+          <button (click)="goBack()">Back to User List</button>
+        </div>
+      </ng-template>
+    </div>

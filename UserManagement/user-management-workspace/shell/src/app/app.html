@@ -1,0 +1,23 @@
+<div class="shell-wrapper">
+  @if(auth.isAuthenticated()){
+
+    <nav class="navbar">
+      <div class="brand">
+        <span class="icon">🚀</span>
+        <span>Enterprise Shell Host (Port 4200)</span>
+      </div>
+      <div class="nav-menu">
+        <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        <a routerLink="/user-list" routerLinkActive="active">User List</a>
+      </div>
+      <div class="user-info">
+        <span>{{ auth.currentUser()?.name }}</span>
+        <button class="btn-logout" (click)="auth.logout()">Sign Out</button>
+      </div>
+    </nav>
+  }
+
+  <main class="container">
+    <router-outlet></router-outlet>
+  </main>
+</div>

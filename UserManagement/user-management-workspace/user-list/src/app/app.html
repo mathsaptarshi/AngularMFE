@@ -1,0 +1,43 @@
+<div class="user-list-wrapper">
+      <div class="title-bar">
+        <div>
+          <h2>User Directory</h2>
+          <p>Loaded from <code>user-list (Port 4202)</code> on <code>/user-list</code></p>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Role</th>
+              <th>Department</th>
+              <th>Status</th>
+              <th>Location</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users()">
+              <td class="user-cell">
+                <img [src]="user.avatar" [alt]="user.name" class="avatar" />
+                <div>
+                  <div class="name">{{ user.name }}</div>
+                  <div class="email">{{ user.email }}</div>
+                </div>
+              </td>
+              <td>{{ user.role }}</td>
+              <td>{{ user.department }}</td>
+              <td>
+                <span class="badge" [class.active]="user.status === 'Active'">{{ user.status }}</span>
+              </td>
+              <td>{{ user.location }}</td>
+              <td>
+                <button class="btn-action" (click)="viewDetails(user.id)">View Profile &rarr;</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

@@ -1,0 +1,12 @@
+{
+  "name": "user-management-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix shell install && npm --prefix dashboard install && npm --prefix user-list install && npm --prefix user-details install",
+    "start": "npx concurrently -k -p \"[{name}]\" -n \"SHELL,DASHBOARD,USER_LIST,USER_DETAILS\" -c \"cyan,magenta,green,yellow\" \"npm --prefix shell start\" \"npm --prefix dashboard start\" \"npm --prefix user-list start\" \"npm --prefix user-details start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

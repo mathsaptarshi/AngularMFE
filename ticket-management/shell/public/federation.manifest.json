@@ -1,0 +1,5 @@
+{
+  "movie-list": "http://localhost:4201/remoteEntry.json",
+  "ticket-availability": "http://localhost:4202/remoteEntry.json",
+  "user-profile": "http://localhost:4205/remoteEntry.json"
+}

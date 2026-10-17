@@ -1,0 +1,31 @@
+<div class="mfe-card">
+  <div class="header">
+    <h2>Dashboard Overview</h2>
+    <div class="header-details">
+      <span class="mfe-badge">Remote: dashboard (Port 4201)</span>
+      @if (user(); as activeUser) {
+      <div class="active-user">
+        <span class="user-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+          </svg>
+          <span class="status-indicator"></span>
+        </span>
+        <span class="user-name">{{ activeUser.name }}</span>
+        <span class="active-label">Active</span>
+      </div>
+      }
+    </div>
+  </div>
+  <p class="subtitle">System metrics and active session overview</p>
+
+  <div class="stats-grid">
+    @for (s of metrics(); track s.label) {
+    <div class="stat-card">
+      <span class="label">{{ s.label }}</span>
+      <span class="value">{{ s.value }}</span>
+      <span class="delta" [class.positive]="s.positive">{{ s.change }} vs last month</span> 
+    </div>
+    }
+  </div>
+</div>
