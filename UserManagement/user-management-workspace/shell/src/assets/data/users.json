@@ -8,7 +8,14 @@
     "status": "Active",
     "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun",
     "joinDate": "2023-01-15",
-    "location": "Bengaluru, India"
+    "location": "Bengaluru, India",
+    "address": {
+      "firstline": "42 Residency Road",
+      "secondline": "Apt 5B",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "pin": "560025"
+    }
   },
   {
     "id": 2,
@@ -19,7 +26,14 @@
     "status": "Active",
     "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya",
     "joinDate": "2022-08-01",
-    "location": "Kolkata, India"
+    "location": "Kolkata, India",
+    "address": {
+      "firstline": "18 Park Street",
+      "secondline": "Flat 3A",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "pin": "700016"
+    }
   },
   {
     "id": 3,
@@ -30,6 +44,13 @@
     "status": "Pending",
     "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Rohit",
     "joinDate": "2024-03-10",
-    "location": "Hyderabad, India"
+    "location": "Hyderabad, India",
+    "address": {
+      "firstline": "7 Jubilee Hills Road",
+      "secondline": "Villa 12",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "pin": "500033"
+    }
   }
 ]

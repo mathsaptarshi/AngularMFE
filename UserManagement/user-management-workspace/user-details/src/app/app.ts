@@ -2,9 +2,10 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule, RouterOutlet } from '@angular/router';
+import { Profile } from './profile/profile';
 
 @Component({
-  imports: [RouterOutlet, CommonModule, RouterModule],
+  imports: [ CommonModule, RouterModule, Profile],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
@@ -43,5 +44,12 @@ export class App {
 
   goBack() {
     this.router.navigate(['/user-list']);
+  }
+
+  receiveChildData(e:any){
+    console.log("receiveChildData",e)
+  }
+  handleMessage(e: any) {
+    console.log(e);
   }
 }

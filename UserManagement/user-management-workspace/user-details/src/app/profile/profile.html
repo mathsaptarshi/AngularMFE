@@ -1,0 +1,21 @@
+<!-- <p> {{userProfile()|json}} profile works!</p> -->
+<div class="detail-item">
+  <span class="label">Email Address</span>
+  <span class="value">{{ userProfile()?.email }}</span>
+</div>
+<div class="detail-item">
+  <span class="label">Department</span>
+  <span class="value">{{ userProfile()?.department }}</span>
+</div>
+<div class="detail-item">
+  <span class="label">Location</span>
+  <span class="value">{{ userProfile()?.location }}</span>
+</div>
+<div class="detail-item">
+  <span class="label">Joined Date</span>
+  <span class="value">{{ userProfile()?.joinDate || '2023-01-15' }}</span>
+</div>
+
+<div>
+  <button type="button" (click)="sendDatatoParent()">Send Parent</button>
+</div>
