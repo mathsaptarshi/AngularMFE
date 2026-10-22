@@ -42,4 +42,7 @@ export class App {
   viewDetails(id: number) {
     this.router.navigate(['/users', id]);
   }
+  editDetails(id: number) {
+    console.log(id)
+  }
 }

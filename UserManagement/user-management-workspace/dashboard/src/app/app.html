@@ -21,7 +21,7 @@
 
   <div class="stats-grid">
     @for (s of metrics(); track s.label) {
-    <div class="stat-card">
+    <div class="stat-card" [appHighlight]="'lightblue'">
       <span class="label">{{ s.label }}</span>
       <span class="value">{{ s.value }}</span>
       <span class="delta" [class.positive]="s.positive">{{ s.change }} vs last month</span> 

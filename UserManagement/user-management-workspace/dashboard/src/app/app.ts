@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, signal } from '@angular/core';
+import { Highlight } from '../directives/highlight';
 
 interface AuthenticatedUser {
   name: string;
@@ -7,7 +8,7 @@ interface AuthenticatedUser {
 }
 
 @Component({
-  imports: [ CommonModule],
+  imports: [ CommonModule, Highlight],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
